@@ -1,0 +1,123 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,p,a{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: hsl(120, 100%, 25%);
+    color: white;
+}
+h1{
+    font-size: 1.7em;
+}
+.nav-links{
+    display: flex;
+}
+.dropdown{
+    margin: 0 0.5rem;
+}
+.btn{
+    border: none;
+    background-color: hsl(120, 100%, 25%);
+}
+
+.first-main-sect{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5.5rem 2rem 10.5rem;
+    background-image: url('./images/Pictures-HD-Forest-Download.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin-bottom: 1rem;
+}
+h2{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+h3{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.first-main-sect p{
+    text-align: left;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+}
+
+.spotlight{
+    margin: 1.5rem 1rem 1rem;
+}
+
+.spotlight-images{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.left-spot{
+    width: 55%;
+    height: 300px;
+}
+
+.right-spot{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: hsl(60, 100%, 40%);
+    width: 45%;
+    padding: 2rem;
+}
+.bloom-header{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+button{
+    width: 30%;
+    margin-top: 1.5rem;
+    background-color: hsl(60, 100%, 40%);
+    color: black;
+}
+
+footer{
+    background-color: hsl(120, 100%, 15%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem 4rem 4rem;
+}
+.company-name{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.phone,
+.email{
+    display: flex;
+    align-items: center;
+}
+.fa-phone,
+.fa-envelope{
+    margin: 0 0.5rem;
+}
