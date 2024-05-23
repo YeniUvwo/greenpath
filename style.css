@@ -1,12 +1,17 @@
-*{
+/* general, container styling */
+*,
+body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
+
 a{
     text-decoration: none;
     color: white;
 }
+
 p{
     margin: 0;
 }
@@ -14,19 +19,50 @@ p{
 .container-fluid{
     padding: 0;
 }
+
+.first-main-sect{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6rem 2rem 10rem;
+    background-image: url('./images/Pictures-HD-Forest-Download.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin-bottom: 1rem;
+}
+@media(max-width: 599px) {
+    .first-main-sect{
+        align-items: center;
+    }
+}
+
+.spotlight-container{
+    margin: 1.5rem 1rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.modal-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* navbar */
 .nav-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-h1{
-    font-size: clamp(1.2em, 2.5vw, 1.7em);
-}
 .navbar{
     padding: 2rem;
     background-color: hsl(120, 100%, 25%);
     color: white;
-    /* width: 100%; */
 }
 .navbar-collapse{
     justify-content: right;
@@ -35,12 +71,23 @@ h1{
     color: white;
     font-size: clamp(0.7em, 1.3vw, 1.5em);
 }
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+@media(max-width: 350px) {
+    .navbar-toggler{
+        border: none;
+        padding: 5px;
+    }
+}
+
+
+/* dropdown */
 .dropdown{
     margin: 0 0.7rem;
 }
 .dropdown-menu{
     background-color: white;
-    /* color: hsl(120, 100%, 25%); */
 }
 .dropdown-item{
     color: hsl(60, 100%, 40%);
@@ -56,226 +103,241 @@ h1{
     color: black;
     text-decoration: underline;
 }
-.navbar-toggler:focus{
-    box-shadow: none;
-}
+
+
+/* modal */
 .modal-title{
     margin: auto;
     font-weight: bold;
 }
+.modal-body{
+    padding: 0.8rem 1.2rem;
+}
 .mb-3{
     display: flex;
     flex-direction: column;
-}
-.mb-3 label{
-    margin-bottom: 0.5em;
-    font-size: 0.9em;
-}
-.mb-3 input{
-    padding: 0.1rem 0.5rem;
-    border: 1px solid gray;
-    border-radius: 5px;
-}
-.mb-3 input:focus{
-    border: none;
-    outline: none;
-    border: 1px solid gray;
+    margin-bottom: 0.5rem !important;
 }
 .message-textarea .form-control{
-    padding: 3rem .75rem;
+    padding: .75rem;
+}
+.modal-message{
+    font-size: clamp(0.9em, 1vw, 0.9em)
 }
 .modal-message:focus{
     outline: none;
     box-shadow: none;
 }
 
-@media(max-width: 599px){
-    h1{
-        font-size: clamp(0.9em, 3vw, 1.4em);
-    }
+
+/* labels inputs and options */
+label{
+    margin: 0.3em 0.5em 0.3em 0;
+    font-size: clamp(0.9em, 0.8vw, 0.8em);
+}
+.mb-3 input{
+    padding: 0.3rem 0.5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: clamp(0.9em, 0.8vw, 0.8em);
+}
+.mb-3 input:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid gray;
+}
+select{
+    margin-bottom: 0.6em;
+    cursor: pointer;
+    padding: 0.3rem 0;
+}
+.form-select:focus{
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+}
+.option{
+    cursor: pointer;
+    font-size: clamp(0.9em, 1vw, 0.9em);
 }
 
-.first-main-sect{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 6rem 2rem 10rem;
-    background-image: url('./images/Pictures-HD-Forest-Download.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    margin-bottom: 1rem;
-}
-h2{
-    font-size: clamp(1.5em, 1.9vw, 2.5em);
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-}
-h3{
-    font-size: clamp(1.2em, 2.2vw, 1.5em);
-    font-weight: bold;
-}
+
+/* first main sect container content */
 .first-main-sect p{
     text-align: left;
     width: 50%;
     margin-bottom: 1rem;
     font-size: clamp(0.9em, 1.3vw, 1.3em);
 }
-button{
-    border: none;
-    border-radius: 5px;
-}
-.first-main-sect button{
-    padding: 0.5rem 0.7rem;
-    max-width: 450px;
-    width: 200px;
-    margin-top: 1.5rem;
-    background-color: hsl(60, 100%, 40%);
-    font-size: clamp(0.9em, 1.3vw, 1.5em);
-}
-.first-main-sect button:hover{
-    background-color: hsl(120, 100%, 25%);
-    color: white;
-}
-
 @media(max-width: 599px) {
-    h3{
-        text-align:center;
-    }
-    .first-main-sect{
-        align-items: center;
-    }
     .first-main-sect p{
         width: 100%;
         text-align: center;
     }
 }
 
-.modal-dialog{
-    position: fixed;
-    margin: auto;
-    right: 10rem;
-    top: 4rem;
-    width: 450px;
+
+/* headers */
+h1{
+    font-size: clamp(1.2em, 2.5vw, 1.7em);
 }
-.modal-body{
-    padding: 1.2rem;
+.mobile-h1{
+    display: none;
 }
-.email-label,
-.company-label{
-    margin-right: 0.5rem;
+@media(max-width: 400px) {
+    .desktop-h1{
+        display: none;
+    }
+    .mobile-h1{
+        display: initial;
+    }
 }
-.email-input,
-.company-input{
-    padding: 0 0.5rem;
+@media(max-width: 599px){
+    h1{
+        font-size: clamp(0.9em, 3vw, 1.4em);
+    }
 }
-.industry-label,
-.interest-label,
-.location-label{
-    margin-bottom: 0.5rem;
-    font-size: 0.9em;
+
+h2{
+    font-size: clamp(1.5em, 1.9vw, 2.5em);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
 }
-.industry,
-.interest,
-.location{
-    margin-bottom: 0.6em;
-    cursor: pointer;
+
+h3{
+    font-size: clamp(1.2em, 2.2vw, 1.5em);
+    font-weight: bold;
 }
-.industry option,
-.interest option,
-.location option{
-    cursor: pointer;
+@media(max-width: 599px) {
+    h3{
+        text-align:center;
+    }
 }
-.modal-button{
+
+h4{
+    font-size: clamp(1.3em, 2vw, 1.5em);
+}
+
+
+/* spotlight container content */
+.bloom{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
+    height: 300px;
+    width: 100%;
 }
-.modal-button button{
+.bloom-left-box{
+    width: 48%;
+    max-width: 800px;
+    height: 100%;
+}
+.bloom-right-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: hsl(0, 0%, 90%);
+    width: 48%;
+    max-width: 800px;
+    height: 100%;
+    padding: 2rem;
+}
+.bloom-right-header{
+    font-size: clamp(1.2em, 2vw, 2em);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.bloom-left-box img{
+    height: 100%;
+    width: 100%;
+}
+.bloom-right-box-text{
+    font-size: clamp(0.9em, 1.2vw, 1.5em);
+}
+@media(max-width: 750px){
+    .spotlight-container{
+        margin-left: 0;
+        margin-right: 0;
+        align-items: center;
+    }
+    .bloom{
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 600px;
+    }
+    .bloom-left-box,
+    .bloom-right-box{
+        width: 100%;
+        height: 300px
+    }
+    .bloom-right-box{
+        align-items: center;
+    }
+    .bloom-right-box-text{
+        text-align: center;
+    }
+}
+
+
+/* buttons */
+button{
+    border: none;
+    border-radius: 5px;
+    font-size: clamp(0.9em, 1.3vw, 1.5em);
+}
+
+.cancel-btn,
+.submit-btn{
     margin: 1rem 1.5rem 0.5rem;
     padding: 0.5rem 1rem;
     width: 40%;
     background-color: hsl(60, 100%, 40%);
     color: black;
     border: none;
-    font-size: 0.9em;
+    font-size: clamp(0.9em, 1vw, 0.9em);
 }
-.modal-button button:hover{
+.cancel-btn:hover,
+.submit-btn:hover,
+.start-here-btn:hover,
+.show-you-btn:hover{
     background-color: hsl(120, 100%, 25%);
     color:  white;
 }
 
-
-@media(max-width: 599px) {
-    .modal-dialog{
-        right: 3rem;
-        top: 0;
-        width: 300px;
-    }
-}
-
-.spotlight{
-    margin: 1.5rem 1rem 3.5rem;
-}
-h4{
-    font-size: 1.2em;
-}
-.spotlight-images{
-    display: flex;
-    margin-top: 1rem;
-    height: 300px;
-}
-.left-spot{
-    width: 50%;
-}
-.right-spot{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: black;
-    color: hsl(0, 0%, 90%);
-    width: 50%;
-    padding: 2rem;
-}
-.bloom-header{
-    font-size: clamp(1.2em, 2vw, 2em);
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-.spotlight-text{
-    font-size: clamp(0.8em, 1.2vw, 1.5em);
-}
-.spotlight button{
+.start-here-btn{
     padding: 0.5rem 0.7rem;
-    width: 40%;
+    width: 70%;
+    max-width: 200px;
+    margin-top: 1.5rem;
+    background-color: hsl(60, 100%, 40%);
+}
+
+.show-you-btn{
+    padding: 0.5rem 0.7rem;
+    width: 70%;
+    max-width: 200px;
     margin-top: 1.5rem;
     background-color: hsl(60, 100%, 40%);
     color: black;
-    font-size: clamp(0.8em, 1.2vw, 1.5em);
-}
-.spotlight button:hover{
+}.show-you-btn:hover{
     background-color: hsl(120, 100%, 25%);
     color:  white;
 }
 
-@media(max-width:599px) {
-    .spotlight-images{
-        flex-direction: column-reverse;
-        height: auto;
-    }
-    .left-spot,
-    .right-spot{
-        width: 100%;
-    }
-    .right-spot{
-        align-items: center;
-    }
-    .spotlight-text{
-        text-align: center;
-    }
+/* form feedback */
+.error-message{
+    color: red;
+    display: none;
+}
+.success-message{
+    color: green;
+    display: none;
 }
 
+/* footer */
 footer{
     background-color: hsl(120, 100%, 25%);
     color: white;
@@ -320,7 +382,6 @@ footer{
 .contact-p,
 .services p,
 .about p{
-    /* font-size: 1em; */
     font-size: clamp(0.9em, 1.6vw, 1.4em);
     font-weight: bold;
     text-align: center;
@@ -333,9 +394,11 @@ footer{
 footer li{
     cursor: pointer;
     font-size: clamp(0.6em, 1.4vw, 1.2em);
+    list-style-type: none;
 }
 .subscription{
     display: flex;
+    align-items: center;
     justify-content: center;
     margin-bottom: 4em;
 }
@@ -348,24 +411,28 @@ footer li{
     font-weight: bold;
 }
 .latest-p{
-    /* font-size: 0.8em; */
     font-size: clamp(0.7em, 1.5vw, 0.8em);
 }
+.sub-input-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .sub-input{
-    padding: 0.8em 1.8em;
+    padding: 0.7em 0.8em;
+    width: 300px;
     border-radius: 5px;
     margin-right: 0.7em;
     outline: none;
     border: none;
-    font-size: clamp(0.8em, 1.5vw, 1.3em);
+    font-size: clamp(0.8em, 1.1vw, 1.5em);
 }
-.sub-btn{
-    padding: 0.8em 1.5em;
+.subscribe-btn{
+    padding: 0.5em 1.5em;
     background-color: hsl(60, 100%, 40%);
     color: black;
-    font-size: clamp(0.8em, 1.5vw, 1.3em);
 }
-.sub-btn:hover{
+.subscribe-btn:hover{
     color: hsl(60, 100%, 40%);
     background-color: white;
 }
@@ -385,14 +452,13 @@ footer li{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 0.2rem; */
 }
 .copyright{
     font-size: clamp(0.5em, 0.7vw, 0.8em);
     margin-bottom: 0.2rem;
 }
 .fa-copyright{
-    font-size: 0.9em;
+    font-size: clamp(0.5em, 0.7vw, 0.8em)
 }
 
 @media(max-width: 599px) {
@@ -409,13 +475,8 @@ footer li{
         justify-content: center;
         margin-bottom: 0.5rem;
     }
-    .sub-input-btn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     .sub-input,
-    .sub-btn{
+    .subscribe-btn{
         padding: 1rem;
     }
 }
