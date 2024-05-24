@@ -70,12 +70,12 @@
                 <form action="" id="supportForm">
                   <div class="mb-3">
                     <label for="nameCompany" class="form-label">Name/Company:</label>
-                    <input type="text" class="form-control" id="nameCompany" required>
+                    <input type="text" class="form-control" id="nameCompany">
                     <div class="error-message" id="nameError">Name/Company is required</div>
                   </div>
                   <div class="mb-3">
                     <label for="guestEmail" class="form-label">Email:</label>
-                    <input type="text" class="form-control" id="guestEmail" placeholder="name@example.com" required>
+                    <input type="text" class="form-control" id="guestEmail" placeholder="name@example.com">
                     <div class="error-message" id="emailError">Please input valid email</div>
                   </div>
                   <div class="mb-3">
@@ -93,7 +93,7 @@
                     <button class="submit-btn" type="submit">Submit</button>
                   </div>
                 </form>
-                <div class="error-message" id="formError">Please fill out required fields correctly</div>
+                <!-- <div class="error-message" id="formError">Please fill out required fields correctly</div> -->
                 <div class="success-message" id=successMessage>Your message has been sent successfully</div>
               </div>
             </div>
@@ -115,19 +115,21 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-body">
-                  <form action="" id="contactForm">
+                  <form action="" id="inputForm">
                     <div class="mb-3">
                       <label for="email" class="email-label">Email:</label>
-                      <input type="email" class="email-input form-control-sm" id="inputEmail" placeholder="name@example.com" required>
+                      <input type="email" class="email-input form-control-sm" id="inputEmail" placeholder="name@example.com">
+                      <div class="error-message" id="inputEmailError">Invalid email address</div>
                     </div>
                     <div class="mb-3">
                       <label for="company" class="company-label">Company:</label>
-                      <input type="text" class="company-input form-control-sm" id="inputCompany" placeholder="company name" required>
+                      <input type="text" class="company-input form-control-sm" id="inputCompany" placeholder="company name">
+                      <div id="companyError" class="error-message">Company is required.</div>
                     </div>
                     <div class="industry-container">
                       <label for="industry" class="industry-label">Industry:</label>
-                      <select class="form-select form-select-sm industry" id="industry" name="industry" required>
-                        <option selected>Choose an industry</option>
+                      <select class="form-select form-select-sm industry" id="industry" name="industry">
+                        <option value="" selected>Choose an industry</option>
                         <option value="advertising">Advertising</option>
                         <option value="aerospace">Aerospace</option>
                         <option value="agriculture">Agriculture</option>
@@ -159,23 +161,26 @@
                         <option value="transportation">Transportation</option>
                         <option value="utilities">Utilities</option>
                       </select>
+                      <div id="industryError" class="error-message">Please pick an industry</div>
                     </div>
                     <div class="interest-container">
                       <label for="interest" class="interest-label">Service/Area of interest:</label>
-                      <select class="form-select form-select-sm interest" id="interest" name="interest" required>
-                        <option selected>Select</option>
+                      <select class="form-select form-select-sm interest" id="interest" name="interest">
+                        <option value="" selected>Select</option>
                         <option value="carbon">Carbon footprint reduction</option>
                         <option value="strategy">Sustainability strategy</option>
                         <option value="reporting">ESG reporting</option>
                         <option value="comms">ESG media & communications</option>
                         <option value="other">Other</option>
                       </select>
+                      <div id="interestError" class="error-message">Please choose an area of interest</div>
                     </div>
                     <div class="location">
                       <label for="location" class="location-label">Location:</label>
-                      <select class="form-select form-select-sm location" name="location" id="location" required>
+                      <select class="form-select form-select-sm location" name="location" id="location">
                         <option value="" disabled selected>Select</option>
                       </select>
+                      <div class="error-message" id="locationError">Please select a location</div>
                     </div>
                     <div class="modal-btn-container">
                       <button class="cancel-btn" type="submit" data-bs-dismiss="modal">Cancel</button>
@@ -262,6 +267,5 @@
         </footer>
       </div> 
       <script src="main.js"></script>
-      <script src="server.js"></script>
     </body>
 </html>

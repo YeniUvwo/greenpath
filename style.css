@@ -122,7 +122,7 @@ p{
     padding: .75rem;
 }
 .modal-message{
-    font-size: clamp(0.9em, 1vw, 0.9em)
+    font-size: clamp(0.9em, 1vw, 0.9em);
 }
 .modal-message:focus{
     outline: none;
@@ -130,7 +130,7 @@ p{
 }
 
 
-/* labels inputs and options */
+/* labels, forms, inputs and options */
 label{
     margin: 0.3em 0.5em 0.3em 0;
     font-size: clamp(0.9em, 0.8vw, 0.8em);
@@ -159,8 +159,21 @@ select{
 }
 .option{
     cursor: pointer;
-    font-size: clamp(0.9em, 1vw, 0.9em);
+    font-size: clamp(0.7em, 0.8vw, 0.7em);
 }
+
+/* form feedback */
+.error-message{
+    color: red;
+    display: none;
+    font-size: 0.875em;
+}
+.success-message{
+    color: green;
+    display: none;
+    font-size: 0.875em;
+}
+
 
 
 /* first main sect container content */
@@ -327,15 +340,6 @@ button{
     color:  white;
 }
 
-/* form feedback */
-.error-message{
-    color: red;
-    display: none;
-}
-.success-message{
-    color: green;
-    display: none;
-}
 
 /* footer */
 footer{
