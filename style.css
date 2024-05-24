@@ -1,5 +1,4 @@
 /* general, container styling */
-*,
 body{
     padding: 0;
     margin: 0;
@@ -30,7 +29,6 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    margin-bottom: 1rem;
 }
 @media(max-width: 599px) {
     .first-main-sect{
@@ -39,11 +37,16 @@ p{
 }
 
 .spotlight-container{
-    margin: 1.5rem 1rem 3.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding: 1rem 0;
+}
+@media(max-width: 599px) {
+   .spotlight-container{
+    align-items: center;
+   }
 }
 
 .modal-btn-container{
@@ -228,35 +231,28 @@ h3{
     }
 }
 
-h4{
-    font-size: clamp(1.3em, 2vw, 1.5em);
-}
-
 
 /* spotlight container content */
 .bloom{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
     height: 300px;
-    width: 100%;
 }
 .bloom-left-box{
-    width: 48%;
-    max-width: 800px;
+    width: 50%;
     height: 100%;
 }
 .bloom-right-box{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     background-color: black;
     color: hsl(0, 0%, 90%);
-    width: 48%;
-    max-width: 800px;
+    width: 50%;
     height: 100%;
-    padding: 2rem;
+    padding: 3.5rem 2rem;
 }
 .bloom-right-header{
     font-size: clamp(1.2em, 2vw, 2em);
@@ -269,28 +265,20 @@ h4{
 }
 .bloom-right-box-text{
     font-size: clamp(0.9em, 1.2vw, 1.5em);
+    text-align: center;
 }
 @media(max-width: 750px){
-    .spotlight-container{
-        margin-left: 0;
-        margin-right: 0;
-        align-items: center;
-    }
     .bloom{
         flex-direction: column-reverse;
         align-items: center;
-        height: 600px;
+        height: 550px;
     }
     .bloom-left-box,
     .bloom-right-box{
         width: 100%;
-        height: 300px
     }
-    .bloom-right-box{
-        align-items: center;
-    }
-    .bloom-right-box-text{
-        text-align: center;
+    .bloom-right-header{
+        margin-bottom: 1.2rem;
     }
 }
 
@@ -467,7 +455,16 @@ footer li{
 
 @media(max-width: 599px) {
     footer{
-        padding: 2rem 1rem 0;
+        padding: 3.5rem 1rem 0;
+    }
+    .company-name{
+        margin-bottom: 3rem;
+    }
+    footer ul{
+       padding: 0;
+    }
+    footer li{
+        text-align: center;
     }
     .subscription{
         flex-direction: column;
@@ -479,8 +476,15 @@ footer li{
         justify-content: center;
         margin-bottom: 0.5rem;
     }
-    .sub-input,
-    .subscribe-btn{
+    .sub-input-btn{
+        flex-direction: column;
+    }
+    .sub-input{
+        margin: 1rem 0 0.5rem;
         padding: 1rem;
+    }
+    .subscribe-btn{
+        
+        padding: 0.5em 1.5em;
     }
 }
