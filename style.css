@@ -81,11 +81,6 @@ p {
   justify-content: right;
 }
 
-.nav-item{
-  display: flex;
-  align-items: center;
-}
-
 .nav-link {
   color: var(--text-color);
   font-size: clamp(1.1em, 1.3vw, 1.5em);

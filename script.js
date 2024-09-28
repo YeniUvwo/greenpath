@@ -215,18 +215,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-
-document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
-  
-  // Simple email validation
-  const emailInput = document.getElementById('subscribeInput');
-  if (emailInput.value === "") {
-      alert("Please enter your email address.");
-      return;
-  }
-
-  // If validation passes, submit the form
-  this.submit();
-});
