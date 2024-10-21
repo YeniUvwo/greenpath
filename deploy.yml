@@ -21,7 +21,7 @@ jobs:
       run: |
         lftp -f "
         open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
-        mirror --reverse --delete --verbose ./C:\Users\yeni\greenpath /public_html
+        mirror --reverse --delete --verbose ./ /public_html
         bye
         "
       env:
