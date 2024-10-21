@@ -19,11 +19,12 @@ jobs:
 
     - name: Deploy files via FTP
       run: |
-        lftp -f "
+       lftp -f "
         open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
-        mirror --reverse --delete --verbose ./ /public_html
+        mirror --reverse --delete --verbose ./public /public_html --exclude .git
         bye
         "
+
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
