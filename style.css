@@ -40,7 +40,7 @@ p {
 
 @media(max-width: 599px) {
   .first-main-sect {
-      align-items: center;
+    align-items: center;
   }
 }
 
@@ -54,7 +54,7 @@ p {
 
 @media(max-width: 599px) {
   .spotlight-container {
-      align-items: center;
+    align-items: center;
   }
 }
 
@@ -293,17 +293,24 @@ h1 {
   font-size: clamp(1.2em, 2.5vw, 1.7em);
 }
 
-.mobile-h1 {
+.mobile-logo{
   display: none;
 }
 
 @media(max-width: 400px) {
-  .desktop-h1 {
-      display: none;
+  .navbar{
+    flex-wrap: nowrap;
+    justify-content: space-around;
   }
-
-  .mobile-h1 {
-      display: initial;
+  .desktop-h1 {
+    display: none;
+  }
+  .mobile-logo{
+    display: initial;
+    /* width: 30%; */
+  }
+  .mobile-logo img{
+    width: 50%;
   }
 }
 
