@@ -301,13 +301,13 @@ h1 {
   .navbar{
     flex-wrap: nowrap;
     justify-content: space-around;
+    padding: 2em 2.7em 2em 2em;
   }
   .desktop-h1 {
     display: none;
   }
   .mobile-logo{
     display: initial;
-    /* width: 30%; */
   }
   .mobile-logo img{
     width: 50%;
