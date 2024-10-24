@@ -200,16 +200,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const emailInput = document.getElementById('subscribeInput');
   const invalidFeedback = document.getElementById('subscribeInputFeedback');
 
-  subscribeForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const isValid = validateSubscription();
-
-    if(isValid){
-      acceptSubscription();
-    }
-  });
-
   function validateSubscription(){
     let isValid = true;
 

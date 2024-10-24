@@ -16,6 +16,8 @@ body {
 a {
   text-decoration: none;
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -373,6 +375,9 @@ h3 {
   font-size: clamp(0.9em, 1.2vw, 1.5em);
   text-align: center;
 }
+.bloom-right-box a{
+  display: inherit;
+}
 
 @media(max-width: 750px) {
   .bloom {
@@ -440,7 +445,6 @@ button {
 
 .show-you-btn {
   padding: 0.5rem 0.7rem;
-  width: 70%;
   max-width: 200px;
   margin-top: 1.5rem;
   background-color: var(--secondary-color);
