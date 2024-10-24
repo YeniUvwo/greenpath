@@ -15,7 +15,7 @@
 
     <script src="https://kit.fontawesome.com/8f11bc9294.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
   </head>
   <body>
     <div class="container-fluid">
@@ -69,7 +69,7 @@
             <div class="modal-header">
               <div class="modal-title"> Send us a message</div>
             </div>
-            <div class="          </div>modal-body">
+            <div class="modal-body">
               <form class="needs-validation" action="https://formspree.io/f/mrbzwnbe" method="POST" id="supportForm" novalidate>
                 <div class="mb-3">
                   <label for="nameCompany" class="form-label">Name/Company:</label>
@@ -96,7 +96,7 @@
                   <label class="textarea-label" for="floatingTextarea">Message:</label>
                   <textarea class="form-control modal-message" placeholder="Leave your message here" id="floatingTextarea" name="message" required></textarea>
                   <div class="invalid-feedback">
-                    Message is required
+                    Kindly leave us a message
                   </div>
                 </div>
                 <div class="modal-btn-container">
@@ -263,24 +263,25 @@
           </div>
         </section>
         <div>
-          <div  class="subscription">
+          <div class="subscription">
             <div class="sub-text">
               <p class="sub-p">Subscribe to our newsletter</p>
               <p class="latest-p">For the latest information, updates and more</p>
             </div>
-            <form class="subscribe-input-btn needs-validation" id="subscribeForm" action="https://formspree.io/f/mrbzwnbe" method="POST" novalidate >
+            <form class="subscribe-input-btn needs-validation" id="subscribeForm" action="https://formspree.io/f/mrbzwnbe" method="POST" has-validation>
               <label for="subscribeInput" class="visually-hidden">Email Address</label>
-              <input class="subcribe-input" type="email" class="form-control" placeholder="name@email.com" name="subscribe-btn" id="subscribeInput" required>
+              <input class="subscribe-input form-control" type="email" placeholder="name@email.com" name="subscribe-btn" id="subscribeEmail" required>
+              <!-- <div class="invalid-feedback" id="subscribeInputFeedback">
+                Please enter a valid email address
+              </div>
+              <div class="valid-feedback">
+                Thank you for subscribing!
+              </div> -->
               <button class="subscribe-btn" aria-label="subscribe-btn" type="submit">Subscribe</button>
             </form>      
-            <div class="invalid-feedback">
-              Please enter a valid email address
-            </div>
-            <div class="valid-feedback">
-              Thank you for subscribing!
-            </div>
           </div>
         </div>
+
         <section class="social-icons">
           <i class="fa-brands fa-linkedin"></i>
           <i class="fa-brands fa-x-twitter"></i>
