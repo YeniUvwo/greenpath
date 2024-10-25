@@ -20,11 +20,10 @@ jobs:
     - name: Deploy files via FTP
       run: |
        lftp -f "
-        open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }}
-        mirror --reverse --delete --verbose ./ /home/gptslng/public_html/gptsl.ng/YeniUvwo --exclude .git
+        open -u ${FTP_USERNAME},${FTP_PASSWORD} ${FTP_SERVER}
+        mirror --reverse --delete --verbose './' '/home/gptslng/public_html/gptsl.ng/YeniUvwo' --exclude .git
         bye
         "
-
       env:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
