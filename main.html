@@ -15,11 +15,12 @@
 
     <script src="https://kit.fontawesome.com/8f11bc9294.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css"> 
   </head>
   <body>
     <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid nav-container">
           <header class="desktop-h1">
             <h1>Greenpath Technology Services Ltd.</h1>
@@ -33,41 +34,48 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                  <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" type="button" href="#about" id="about"  aria-label="about-button" aria-expanded="false">About <i class="fa-solid fa-angle-down" ></i></button>
-                  <ul class="dropdown-menu">
+                  <a href="index.html" target="_blank">
+                    <button class="nav-link" type="button" id="about"  aria-label="home-button" aria-expanded="false">Home</button>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="about.html" target="_blank">
+                    <button class="nav-link" type="button" id="about"  aria-label="about-button" aria-expanded="false">About</button>
+                  </a>
+                  <!-- <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="ourCompany" id="">Our Company</a></li>
                     <li><a class="dropdown-item" href="ourPeople" id="">Our People</a></li>
                     <li><a class="dropdown-item" href="activity" id="">What we've been up to</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li class="nav-item dropdown">
-                  <button class="nav-link dropdown-toggle" type="button" href="products" id="products"  aria-label="products-button" data-bs-toggle="dropdown" aria-expanded="false">Products <i class="fa-solid fa-angle-down" ></i></button>
+                  <button class="nav-link  dropdown-toggle" type="button" href="products" id="products"  aria-label="products-button" aria-expanded="false">Products</button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#spotlight-container" id="bloomLink">BloombyOmoyéni</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <button class="nav-link dropdown-toggle" type="button" href="projects" id="projects"  aria-label="projects-button" data-bs-toggle="dropdown" aria-expanded="false">Projects <i class="fa-solid fa-angle-down" ></i>
+                  <button class="nav-link" type="button" href="projects" id="projects"  aria-label="projects-button" aria-expanded="false">Projects
                 </li></button>
                 <li class="nav-item dropdown">
-                  <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" type="button" href="contact" id="contact"  aria-label="contact-button" aria-expanded="false">Contact <i class="fa-solid fa-angle-down" ></i></button>
+                  <button class="nav-link  dropdown-toggle" type="button" href="contact" id="contact"  aria-label="contact-button" aria-expanded="false">Contact</button>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#emailLink" id="" data-bs-toggle="modal" data-bs-target="#supportModal">support@gptsl.ng</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <button class="nav-link dropdown-toggle" type="button" href="newsroom" id="newsroom"  aria-label="Newsroom-button" data-bs-toggle="dropdown" aria-expanded="false">Newsroom <i class="fa-solid fa-angle-down" ></i></button>
+                  <button class="nav-link" type="button" href="newsroom" id="newsroom"  aria-label="Newsroom-button" aria-expanded="false">Newsroom</button>
                 </li>
               </ul>
             </div>
         </div>
       </nav>
 
-      <div class="modal fade right" id="supportModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal fade right" id="supportModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalTitle">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <div class="modal-title"> Send us a message</div>
+              <div class="modal-title" id="modalTitle"> Send us a message</div>
             </div>
             <div class="modal-body">
               <form class="needs-validation" action="https://formspree.io/f/mrbzwnbe" method="POST" id="supportForm" novalidate>
@@ -128,7 +136,7 @@
           </header>
           <h3>Sustainability consulting and advisory services</h3>
           <p>Unlock your sustainability potential with GPTSL, your trusted ESG and sustainability marketing and consulting firm.</p>
-          <button class="start-here-btn" aria-label="start-here-button" data-bs-toggle="modal" data-bs-target="#inputModal">Start here</button>
+          <button class="start-here-btn" aria-label="start-here-button" data-bs-toggle="modal" data-bs-target="#inputModal">Start Here</button>
         </section>
 
         <div class="modal fade right" id="inputModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
@@ -214,12 +222,14 @@
         <section class="spotlight-container" id="spotlight-container">
           <div class="bloom">
             <div class="bloom-left-box">
-              <img src="./images/plant img.webp" loading="lazy" class="" alt="">
+              <img src="images/plant img.webp" loading="lazy" class="" alt="bloom logo">
             </div>
             <div class="bloom-right-box">
               <p class="bloom-right-header">BloombyOmoyéni</p>
               <p class="bloom-right-box-text">BloombyOmoyéni, a subsidiary of GPTSL, specializes in the research, development, and application of innovative plants and products that support carbon neutrality and sustainability.</p>
-              <a href="https://yeniuvwo.github.io/Bloom-by-Omoyeni/" class="show-you-btn btn" aria-label="lets-show-you-button" target="_blank">Let's show you</a>
+              <a href="" class="show-you-btn btn" aria-label="lets-show-you-button">
+                Explore
+              </a>
             </div>
           </div>
         </section>
@@ -271,19 +281,13 @@
             <form class="subscribe-input-btn needs-validation" id="subscribeForm" action="https://formspree.io/f/mrbzwnbe" method="POST" has-validation>
               <label for="subscribeEmail" class="visually-hidden">Email Address</label>
               <input class="subscribe-input form-control" type="email" placeholder="name@email.com" name="subscribe-btn" id="subscribeEmail" required>
-              <!-- <div class="invalid-feedback" id="subscribeInputFeedback">
-                Please enter a valid email address
-              </div>
-              <div class="valid-feedback">
-                Thank you for subscribing!
-              </div> -->
               <button class="subscribe-btn" aria-label="subscribe-btn" type="submit">Subscribe</button>
             </form>      
           </div>
         </div>
 
         <section class="social-icons">
-          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/company/greenpath-technology-services-gptsl/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
           <i class="fa-brands fa-x-twitter"></i>
           <i class="fa-brands fa-instagram"></i>
         </section>

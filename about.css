@@ -1,0 +1,146 @@
+/* Hero Section Styling */
+.hero-section {
+  background-image: url('images/about-bg-img.jpg'); /* Add a background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4); /* Subtle shadow for a modern look */
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2; /* Ensures the text stays on top of the overlay */
+}
+
+
+.hero-section h1 {
+  font-size: clamp(2rem, 5vw + 1rem, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-section .lead {
+  font-size: clamp(1rem, 1.7vw, 1.5rem);
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Mission Statement */
+.mission {
+  background-color: var(--secondary-color);
+  padding: 2.5rem;
+  width: 80%;
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto;
+  color: #333;
+}
+
+/* Our People Section */
+.our-people {
+  padding: 3.75rem 1.25rem;
+  background-color: #f0f0f0;
+}
+
+.our-people h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw + 1rem, 2rem);
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+  color: #333;
+}
+
+.our-people-body {
+  padding: 2rem;
+}
+
+.our-people-body h3{
+  font-size: clamp(1.2rem, 3vw + 1rem, 1.8rem);
+  margin-bottom: 2em;
+}
+
+.team-role-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+
+.team-role-container .mgt-profile {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-role-container .mgt-profile:hover {
+  transform: translateY(-10px);
+}
+
+.team-role-container .mgt-profile img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.team-role-container .mgt-profile p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.team-role-container .team-role {
+  font-weight: 600;
+  color: #007B55; /* Your brand color */
+  font-size: clamp(1rem, 2vw + 1rem, 1.2rem);
+}
+
+/* Been Up To Section */
+.been-upto {
+  /* background-color: var(--primary-color);  */
+  color: black;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.been-upto .upto-first-text {
+  font-weight: 700;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+}
+
+.been-upto p {
+  font-size: clamp(0.875rem, 2vw + 1rem, 1rem);
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Add responsive styling */
+@media (max-width: 865px) {
+  .team-role-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

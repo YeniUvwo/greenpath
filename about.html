@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Transparent background.ico" type="image/x-icon" class="title-logo">
+    <title>About | Greenpath Technology Services</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8f11bc9294.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="global.css"> 
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid nav-container">
+        <header class="desktop-h1">
+          <h1>Greenpath Technology Services Ltd.</h1>
+        </header>
+        <header class="mobile-logo">
+          <img src="images/Transparent background.png" alt="logo">
+        </header>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle-navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a href="main.html" target="_self">
+                  <button class="nav-link" type="button" id="about"  aria-label="about-button" aria-expanded="false">Home</button>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="about.html" target="_blank">
+                  <button class="nav-link" type="button" id="about"  aria-label="about-button" aria-expanded="false">About</button>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" type="button" href="products" id="products"  aria-label="products-button" data-bs-toggle="dropdown" aria-expanded="false">Products</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="" id="bloomLink">BloombyOmoyéni</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link" type="button" href="projects" id="projects"  aria-label="projects-button" aria-expanded="false">Projects
+              </li></button>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" type="button" href="contact" id="contact"  aria-label="contact-button" aria-expanded="false">Contact</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#emailLink" id="" data-bs-toggle="modal" data-bs-target="#supportModal">support@gptsl.ng</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link" type="button" href="newsroom" id="newsroom"  aria-label="Newsroom-button" data-bs-toggle="dropdown" aria-expanded="false">Newsroom</button>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+
+    <div class="modal fade right" id="supportModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title"> Send us a message</div>
+          </div>
+          <div class="modal-body">
+            <form class="needs-validation" action="https://formspree.io/f/mrbzwnbe" method="POST" id="supportForm" novalidate>
+              <div class="mb-3">
+                <label for="nameCompany" class="form-label">Name/Company:</label>
+                <input type="text" class="form-control" id="nameCompany" name="nameCompany" required>
+                <div class="invalid-feedback">
+                  Name/Company is required
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="guestEmail" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="guestEmail" name="guestEmail" placeholder="name@example.com" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email address
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="guestNumber" class="form-label">Phone Number:</label>
+                <input type="tel" class="form-control" placeholder="Please include country code e.g +234" id="guestNumber" name="guestNumber" required>
+                <div class="invalid-feedback">
+                  Required field
+                </div>
+              </div>
+              <div class="message-textarea">
+                <label class="textarea-label" for="floatingTextarea">Message:</label>
+                <textarea class="form-control modal-message" placeholder="Leave your message here" id="floatingTextarea" name="message" required></textarea>
+                <div class="invalid-feedback">
+                  Kindly leave us a message
+                </div>
+              </div>
+              <div class="modal-btn-container">
+                <button class="cancel-btn" aria-label="cancel-btn" type="button" data-bs-dismiss="modal" id="supportCancelButton">Cancel</button>
+                <button class="submit-btn" aria-label="submit-btn" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Hero Section -->
+    <header class="hero-section text-center text-white bg-hero">
+      <div class="container content">
+        <h1 class="display-4">About Us</h1>
+        <p class="lead">Founded in 2023, our mission is to innovate and mitigate the effects of climate change through advanced technologies that drive sustainability and positive environmental impact.</p>
+      </div>
+    </header>
+
+    <div class="mission">
+      <p>"We harness cutting-edge technologies to combat climate change, striving for a sustainable future for generations to come."</p>
+    </div>
+      
+    <div class="our-people">
+      <h2>Our People</h2>
+      <div class="our-people-body">
+        <h3>Management Team:</h3>
+        <div class="team-role-container">
+          <div class="alex-profile mgt-profile">
+            <img src="images/alex_img.jpeg" alt="Alex Uvwo Profile Picture" />
+            <p><span class="team-role"> Oghenovo Alex Uvwo (Chief Marketing Officer):</span> Oghenovo is a seasoned marketing strategist with extensive experience across the FMCG and engineering sectors. His expertise includes brand development, strategic partnerships, and sales optimization. Oghenovo holds a Bachelor's degree in Accounting and an MBA from the University of Birmingham.
+            </p>
+          </div>
+          <div class="mgt-profile">
+            <img src="images/yeni_img.jpg" alt="Yeni Uvwi Profile Picture" />
+            <p><span class="team-role">Omoyeni Ibiyemi Ogunleye (Head of Operations):</span>             Omoyeni is a talented software developer and quality assurance specialist. She has led cross-functional teams to deliver innovative software solutions and successful website projects. Omoyeni holds a Diploma in International Law & Diplomacy from Babcock University and a Bachelor's degree in Politics & International Relations from Lead City University.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="been-upto">
+      <p class="upto-first-text">What we have been up to:</p>
+      <p>Stay tuned for upcoming innovations and partnerships that will drive further positive impact.</p>
+    </div>
+
+    <footer>
+      <section class="footer-logo">
+        <p class="company-name">Greenpath Technology Services Ltd (GPTSL)</p>
+      </section>
+      <section class="middle-foot">
+        <div class="contact">
+          <p class="contact-p">Contact</p>
+          <div class="phone-email">
+            <div class="phone">
+              <i class="fa-solid fa-phone"></i>
+              <p>+2349093610137</p>
+            </div>
+            <div class="email">
+              <i class="fa-solid fa-envelope"></i>
+              <p>support@gptsl.ng</p>
+            </div>
+          </div>
+        </div>
+        <div class="services">
+          <p>Services</p>
+          <ul class="services-detail">
+            <li>Green products</li>
+            <li>Carbon footprint reduction</li>
+            <li>Sustainability strategy</li>
+            <li>ESG reporting</li>
+            <li>ESG media & communications</li>
+          </ul>
+        </div>
+        <div class="about">
+          <p>About us</p>
+          <ul>
+            <li>Our company</li>
+            <li>Our people</li>
+            <li>Newsroom</li>
+          </ul>
+        </div>
+      </section>
+      <div>
+        <div class="subscription">
+          <div class="sub-text">
+            <p class="sub-p">Subscribe to our newsletter</p>
+            <p class="latest-p">For the latest information, updates and more</p>
+          </div>
+          <form class="subscribe-input-btn needs-validation" id="subscribeForm" action="https://formspree.io/f/mrbzwnbe" method="POST" has-validation>
+            <label for="subscribeEmail" class="visually-hidden">Email Address</label>
+            <input class="subscribe-input form-control" type="email" placeholder="name@email.com" name="subscribe-btn" id="subscribeEmail" required>
+            <button class="subscribe-btn" aria-label="subscribe-btn" type="submit">Subscribe</button>
+          </form>      
+        </div>
+      </div>
+
+      <section class="social-icons">
+        <a href="https://www.linkedin.com/company/greenpath-technology-services-gptsl/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </section>
+      <section class="other-foot">
+        <p class="copyright">Copyright <i class="fa-regular fa-copyright"></i> 2024 GPTSL. All rights reserved</p>
+      </section>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
