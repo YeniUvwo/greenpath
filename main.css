@@ -1,0 +1,119 @@
+.first-main-sect {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 6rem 2rem 10rem;
+  background-image: url('./images/Pictures-HD-Forest-Download.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+}
+
+@media(max-width: 599px) {
+  .first-main-sect {
+    align-items: center;
+  }
+}
+
+.spotlight-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+@media(max-width: 599px) {
+  .spotlight-container {
+    align-items: center;
+  }
+}
+
+
+/* First main sect container content */
+.first-main-sect p {
+  text-align: left;
+  width: 50%;
+  margin-bottom: 1rem;
+  font-size: clamp(0.9em, 1.3vw, 1.3em);
+}
+
+@media(max-width: 599px) {
+  .first-main-sect p {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+/* Spotlight container content */
+.bloom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.bloom-left-box {
+  width: 50%;
+  height: 100%;
+}
+
+.bloom-right-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: hsl(0, 0%, 90%);
+  width: 50%;
+  height: 100%;
+  padding: 3.5rem 2rem;
+}
+
+.bloom-right-header {
+  font-size: clamp(1.2em, 2vw, 2em);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.bloom-left-box img {
+  height: 100%;
+  width: 100%;
+}
+
+.bloom-right-box-text {
+  font-size: clamp(0.9em, 1.2vw, 1.5em);
+  text-align: center;
+}
+
+@media(max-width: 750px) {
+  .bloom {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+    max-height: 650px;
+  }
+  .bloom-right-box{
+    margin-bottom: -0.3em;
+  }
+  .bloom-left-box,
+  .bloom-right-box {
+      width: 100%;
+  }
+
+  .bloom-right-header {
+      margin-bottom: 1.2rem;
+  }
+}
+@media(max-width:605px){
+  .bloom{
+    max-height: 550px;
+  }
+}
+@media(max-width:416px){
+  .bloom{
+    max-height: 500px;
+  }
+}
+
