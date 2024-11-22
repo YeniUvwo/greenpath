@@ -457,6 +457,7 @@ footer li{
   outline: none;
   border: none;
   font-size: clamp(0.8em, 1.1vw, 1.5em);
+  text-align: center;
 }
 .subscribe-input:focus {
   border: 1px solid var(--primary-color);
