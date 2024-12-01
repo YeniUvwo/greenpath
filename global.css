@@ -5,16 +5,16 @@
   --border-color: gray;
 }
 
-html{
+html,body{
   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;  
+  font-family: "Open Sans", sans-serif;
+  margin-top: 0;
 }
 
-/* General, container styling */
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+*{
+    box-sizing: border-box;
 }
 
 h1, h2, h3 {
@@ -38,6 +38,7 @@ button {
   border: none;
   border-radius: 5px;
   font-size: clamp(0.9em, 1.3vw, 1.5em);
+  font-weight: bold;
   transition: transform 0.2s; 
   cursor: pointer;
   padding: 0.7rem 1.2rem;
@@ -60,15 +61,6 @@ button:focus {
   color: black;
 }
 
-.cancel-btn:hover,
-.submit-btn:hover,
-.start-here-btn:hover,
-.show-you-btn:hover {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  transform: scale(1.05); /* Subtle scale effect on hover */
-}
-
 .start-here-btn {
   display: block;
   padding: 0.5rem 0.7rem;
@@ -76,22 +68,36 @@ button:focus {
   max-width: 160px;
   margin-top: 1.5rem;
   background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.start-here-btn:hover{
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+.cancel-btn:hover,
+.submit-btn:hover{
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .show-you-btn {
   padding: 0.5rem 0.7rem;
   font-size: clamp(0.9em, 1.3vw, 1.5em);
-  /* width: 100%; */
+  font-weight: bold;
   width: 160px;
   text-align: center;
   margin-top: 1.5rem;
-  background-color: var(--secondary-color);
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: transform 0.2s; 
 }
 
 .show-you-btn:hover {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 
 .container-fluid {
@@ -103,6 +109,8 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .mobile-logo{
@@ -223,6 +231,10 @@ button:focus {
 }
 
 /* Modal */
+.modal{
+  display: none;
+}
+
 .modal-title {
   margin: auto;
   font-weight: bold;
@@ -463,12 +475,12 @@ footer li{
 }
 .subscribe-btn{
   padding: 0.5em 1.5em;
-  background-color: hsl(60, 100%, 40%);
+  background-color: var(--secondary-color);
   transition: border-color 0.2s ease;
-  color: black;
+  color: var(--primary-color);
 }
 .subscribe-btn:hover{
-  color: hsl(60, 100%, 40%);
+  color: var(--primary-color);
   background-color: white;
 }
 .social-icons{
